@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-
+import { MyorgComponents } from '@myorg/components';
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <div className={styles.page}>
       
-      
+      <MyorgComponents />
     <div className="wrapper">
       <div className="container">
         <div id="welcome">
