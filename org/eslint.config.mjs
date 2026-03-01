@@ -4,11 +4,11 @@ export default [
     ...nx.configs["flat/base"],
     ...nx.configs["flat/typescript"],
     ...nx.configs["flat/javascript"],
-    {
-      "ignores": [
+    {      "ignores": [
         "**/dist",
         "**/out-tsc",
-        "**/test-output"
+        "**/test-output",
+        "**/vite.config.*.timestamp*"
       ]
     },
     {

@@ -1,6 +1,5 @@
 import styles from './page.module.css';
 
-
 export default function Index() {
   /*
    * Replace the elements below with your own.
