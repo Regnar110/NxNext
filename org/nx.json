@@ -83,7 +83,11 @@
           "name": "docker:build"
         },
         "runTarget": {
-          "name": "docker:run"
+          "name": "docker:run",
+          "args": [
+            "--publish",
+            "3000:3000"
+          ]
         }
       }
     }

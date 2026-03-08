@@ -1,9 +1,12 @@
-FROM node:24-alpine
-WORKDIR ./app
-COPY package*.json ../../
-RUN npm install
-ENV NODE_ENV development
-ENV PORT 3000
+FROM node:20-alpine
+WORKDIR /app
+
+# Standalone output już jest zbudowany przez nx build
+COPY .next/standalone ./
+COPY .next/static ./.next/static
+# COPY apps/nxNext/public ./public
 
 EXPOSE 3000
-CMD ["npm", "run", "dev", "--", "-H", "0.0.0.0"]
+ENV NODE_ENV=production
+CMD ["node", "apps/nxNext/server.js"]
+# CMD ["tail", "-f", "/dev/null"]
